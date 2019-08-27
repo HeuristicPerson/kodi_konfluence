@@ -25,7 +25,7 @@
 			<include>CommonRootView</include>
 			<!-- view id = 51 -->
 			<include>FullWidthList</include>
-			
+
 			<!-- view id = 500 -->
 			<!-- Standard -->
 			<include condition="!Skin.HasSetting(ViewModeSwitchWallViews)">ThumbnailView</include>
@@ -33,7 +33,7 @@
 			<!-- IF WALL WITH MORE ITEMS IS DEFAULT -->
 			<include condition="Skin.HasSetting(ViewModeSwitchWallViews)">ThumbnailViewSwitched</include>
 			<include condition="Skin.HasSetting(ViewModeSwitchWallViews)">WallView2Switched</include>
-			
+
 			<!-- view id = 510 -->
 			<include>PictureWrapView</include>
 			<!-- view id = 514 -->
@@ -43,17 +43,17 @@
 			<!-- view id = 551 -->
 			<include>AddonInfoThumbView1</include>
 		</control>
-		
+
 		<control type="group">
 			<depth>DepthFooter</depth>
 			<include>CommonPageCount</include>
 			<include>CommonNowPlaying</include>
 		</control>
-		
+
 		<include>MainWindowMouseButtons</include>
 		<include>ScrollOffsetLabel</include>
 		<include>BehindDialogFadeOut</include>
-		
+
 		<include content="CommonWindowHeader">
 			<param name="Icon" value="icon_pictures" />
 			<param name="Label" value="$LOCALIZE[1]" />
@@ -61,6 +61,7 @@
 		<control type="group">
 			<left>-250</left>
 			<include>SideBladeLeft</include>
+			<visible>!Skin.HasSetting(KioskMode)</visible>	
 			<control type="grouplist" id="9000">
 				<left>0</left>
 				<top>110</top>
@@ -72,9 +73,6 @@
 				<ondown>9000</ondown>
 				<onback>50</onback>
 				<itemgap>0</itemgap>
-				
-				
-				
 				<control type="label" id="203">
 					<width>250</width>
 					<height>35</height>
@@ -85,7 +83,6 @@
 					<aligny>center</aligny>
 					<visible>Container.Content(addons)</visible>
 				</control>
-				
 				<control type="button" id="204">
 					<description>Get more</description>
 					<textwidth>235</textwidth>
@@ -94,9 +91,6 @@
 					<onclick>ActivateWindow(AddonBrowser,addons://more/image/,return)</onclick>
 					<visible>Container.Content(addons)</visible>
 				</control>
-				
-				
-				
 				<control type="label" id="200">
 					<width>250</width>
 					<height>35</height>
@@ -106,7 +100,6 @@
 					<align>center</align>
 					<aligny>center</aligny>
 				</control>
-				
 				<control type="button" id="2">
 					<description>View As button</description>
 					<textwidth>235</textwidth>
@@ -168,13 +161,7 @@
 					<include>ButtonCommonValues</include>
 					<label>13319</label>
 				</control>
-				
-				
-				
 				<include>CommonNowPlaying_Controls</include>
-				
-				
-				
 			</control>
 		</control>
 	</controls>

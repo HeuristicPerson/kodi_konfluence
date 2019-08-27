@@ -5,30 +5,30 @@
 	<views>50,901,51,500,550,909,551,560,501,508,504,503,515,505,511</views>
 	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
 	<onload condition="!String.IsEmpty(Window(home).Property(OSDinfodialogButtonActive))">ClearProperty(OSDinfodialogButtonActive,home)</onload>
-	
-	
-	
+
+
+
 	<controls>
-		
+
 		<include>CommonBackground</include>
 		<include>ContentPanelBackgrounds</include>
-		
+
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			
-			
-			
+
+
+
 			<!-- view id = 50 -->
 			<include>CommonRootView</include>
-			
+
 			<!-- 901 -->
 			<include>TextView</include>
-			
-			
+
+
 			<!-- view id = 51 -->
 			<include condition="!Skin.HasSetting(ViewTypesSimplicity)">FullWidthList</include>
-			
-			
+
+
 			<!-- view id = 500 -->
 			<!-- view id = 909 -->
 			<!-- Standard -->
@@ -37,10 +37,10 @@
 			<!-- IF WALL WITH MORE ITEMS IS DEFAULT -->
 			<include condition="Skin.HasSetting(ViewModeSwitchWallViews)">ThumbnailViewSwitched</include>
 			<include condition="Skin.HasSetting(ViewModeSwitchWallViews)">WallView2Switched</include>
-			
-			
 
-			
+
+
+
 			<!-- view id = 501 -->
 			<include condition="!Skin.HasSetting(ViewTypesSimplicity)">PosterWrapView</include>
 			<!-- view id = 508 -->
@@ -57,21 +57,21 @@
 
 			<!-- view id = 560 -->
 			<include>LiveTVView1</include>
-			
-			
-			
+
+
+
 		</control>
-		
+
 		<control type="group">
 			<depth>DepthFooter</depth>
 			<include>CommonPageCount</include>
 			<include>CommonNowPlaying</include>
 		</control>
-		
+
 		<include>MainWindowMouseButtons</include>
 		<include>ScrollOffsetLabel</include>
 		<include>BehindDialogFadeOut</include>
-		
+
 		<!--
 		<value condition="Container.Content(movies) | String.StartsWith(container.folderpath,library://video/movies/) | String.StartsWith(container.folderpath,videodb://movies)">$LOCALIZE[20342]</value>
 		<value condition="Container.Content(musicvideos) | String.StartsWith(container.folderpath,library://video/musicvideos/) | String.StartsWith(container.folderpath,videodb://musicvideos)">$LOCALIZE[20389]</value>
@@ -80,38 +80,33 @@
 		<value condition="Container.Content(episodes)">$LOCALIZE[20343]</value>
 		<value>$LOCALIZE[3]</value>
 		-->
-		
+
 		<control type="group">
 			<include content="CommonWindowHeader">
 				<param name="Icon" value="icon_video" />
 				<param name="Label" value="$VAR[BreadcrumbsVideoVar]" />
 			</include>
-			<visible>String.IsEmpty(Container.PluginName) + 
+			<visible>String.IsEmpty(Container.PluginName) +
 			[Container.Content(Movies) | String.StartsWith(Container.folderpath,library://video/movies/) | String.StartsWith(Container.folderpath,videodb://movies)]</visible>
 		</control>
-		
+
 		<control type="group">
 			<include content="CommonWindowHeader">
 				<param name="Icon" value="_added_img/icon_video_tvshows" />
 				<param name="Label" value="$VAR[BreadcrumbsVideoVar]" />
 			</include>
-			<visible>String.IsEmpty(Container.PluginName) + 
+			<visible>String.IsEmpty(Container.PluginName) +
 			[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | String.StartsWith(Container.folderpath,library://video/tvshows/) | String.StartsWith(Container.folderpath,videodb://tvshows)]</visible>
 		</control>
-		
+
 		<control type="group">
 			<include content="CommonWindowHeader">
 				<param name="Icon" value="_added_img/icon_video_files" />
 				<param name="Label" value="$VAR[BreadcrumbsVideoVar]" />
 			</include>
-			<visible>!String.IsEmpty(Container.PluginName) | 
+			<visible>!String.IsEmpty(Container.PluginName) |
 			[!Container.Content(Movies) + !Container.Content(Sets) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !String.StartsWith(container.folderpath,library://video/movies/) + !String.StartsWith(container.folderpath,videodb://movies) + !String.StartsWith(Container.folderpath,library://video/tvshows/) + !String.StartsWith(Container.folderpath,videodb://tvshows)]</visible>
 		</control>
-		
-		
-		
-		
-		
 		
 		<control type="group">
 			<left>-250</left>
@@ -127,10 +122,7 @@
 				<ondown>9000</ondown>
 				<onback>50</onback>
 				<itemgap>0</itemgap>
-				
-				
-				
-				
+
 				<control type="label" id="203">
 					<width>250</width>
 					<height>35</height>
@@ -140,7 +132,6 @@
 					<align>center</align>
 					<aligny>center</aligny>
 				</control>
-				
 				<control type="button" id="204">
 					<description>Get more</description>
 					<textwidth>235</textwidth>
@@ -173,9 +164,6 @@
 					<include>ButtonCommonValues</include>
 					<label>137</label>
 				</control>
-				
-				
-				
 				<control type="label" id="200">
 					<width>250</width>
 					<height>35</height>
@@ -185,7 +173,6 @@
 					<align>center</align>
 					<aligny>center</aligny>
 				</control>
-				
 				<control type="button" id="2">
 					<description>View As button</description>
 					<textwidth>235</textwidth>
@@ -237,9 +224,6 @@
 					<selected>Skin.HasSetting(View508HideInfo)</selected>
 					<visible>Control.IsVisible(508)</visible>
 				</control>
-				
-				
-				
 				<control type="label" id="201">
 					<width>250</width>
 					<height>35</height>
@@ -250,7 +234,6 @@
 					<aligny>center</aligny>
 					<visible>Container.Content(MusicVideos) | system.haslocks</visible>
 				</control>
-				
 				<control type="radiobutton" id="16">
 					<description>PartyMode</description>
 					<label>589</label>
@@ -266,15 +249,10 @@
 					<selected>system.ismaster</selected>
 					<visible>system.haslocks</visible>
 				</control>
-				
-				
-				
 				<include>CommonNowPlaying_Controls</include>
-				
-				
-				
 			</control>
+			<visible>!Skin.HasSetting(KioskMode)</visible>
 		</control>
-		
+
 	</controls>
 </window>

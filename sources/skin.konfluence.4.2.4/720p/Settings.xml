@@ -4,16 +4,9 @@
 	<controls>
 		<include>CommonBackground</include>
 		<include>ContentPanelBackgrounds</include>
-		
-		
-		
-		
-		
-		
 		<control type="group">
 			<left>0</left>
 			<top>0</top>
-			
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="225" />
 				<effect type="fade" start="0" end="100" time="225" />
@@ -22,8 +15,6 @@
 				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="225" />
 				<effect type="fade" start="100" end="0" time="225" />
 			</animation>
-			
-			
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
@@ -40,7 +31,6 @@
 				<texture border="4">_added_img/black-back2-noborder.png</texture>
 				<animation effect="fade" end="40" time="0" condition="true">conditional</animation>
 			</control>
-			
 			<control type="list" id="9000">
 				<left>0</left>
 				<top>90</top>
@@ -82,16 +72,6 @@
 						<texture border="4">_added_img/main_menu_button-focus.png</texture>
 						<animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(9000)">Conditional</animation>
 					</control>
-					<!--
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>340</width>
-						<height>64</height>
-						<texture border="4">_added_img/main_menu_button-focus-inactive.png</texture>
-						<visible>!Control.HasFocus(9000)</visible>
-					</control>
-					-->
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
@@ -179,29 +159,7 @@
 				<texture border="4">_added_img/black-back2-noborder.png</texture>
 				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
 			</control>
-			<!--
-			<control type="image">
-				<left>270</left>
-				<top>10</top>
-				<width>810</width>
-				<height>52</height>
-				<texture>dialogheader.png</texture>
-				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-			</control>
-			<control type="label">
-				<description>header label</description>
-				<left>300</left>
-				<top>20</top>
-				<width>740</width>
-				<height>30</height>
-				<font>font16</font>
-				<label>$LOCALIZE[31000] $LOCALIZE[5]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			-->
+
 			<control type="image">
 				<left>340</left>
 				<top>90</top>
@@ -224,19 +182,19 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 		</control>
-		
+
 		<control type="group">
 			<depth>DepthFooter</depth>
 			<include>CommonNowPlaying</include>
 		</control>
-		
+
 		<include>MainWindowMouseButtons</include>
 		<include>BehindDialogFadeOut</include>
-		
+
 		<include content="CommonWindowHeader">
 			<param name="Icon" value="icon_system" />
 			<param name="Label" value="$LOCALIZE[5]" />
 		</include>
-		
+
 	</controls>
 </window>

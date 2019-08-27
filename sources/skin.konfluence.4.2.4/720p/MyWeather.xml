@@ -7,7 +7,7 @@
 	<controls>
 		<include>CommonBackground</include>
 		<include>ContentPanelBackgrounds</include>
-		
+
 		<control type="multiimage">
 			<depth>DepthBackground</depth>
 			<include>BackgroundDimensions</include>
@@ -24,7 +24,7 @@
 			<param name="Icon" value="icon_weather" />
 			<param name="Label" value="$LOCALIZE[8]" />
 		</include>
-		
+
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="225" />
@@ -35,9 +35,7 @@
 				<effect type="fade" start="100" end="0" time="225" />
 			</animation>
 			<include>VisibleFadeEffect</include>
-			
-			
-			
+
 			<control type="group">
 				<left>60</left>
 				<top>40</top>
@@ -393,16 +391,16 @@
 					</control>
 				</control>
 			</control>
-			
-			
-			
-			
-			
-			
+
+
+
+
+
+
 			<control type="group">
 				<left>580</left>
 				<top>40</top>
-				
+
 				<!--
 				<control type="image">
 					<left>5</left>
@@ -455,14 +453,14 @@
 				</control>
 			</control>
 		</control>
-		
+
 		<control type="group">
 			<depth>DepthFooter</depth>
 			<include>CommonNowPlaying</include>
 		</control>
-		
+
 		<include>MainWindowMouseButtons</include>
-		
+
 		<control type="group">
 			<left>-250</left>
 			<include>SideBladeLeft</include>
@@ -589,6 +587,6 @@
 				<include>CommonNowPlaying_Controls</include>
 			</control>
 		</control>
-		
+
 	</controls>
 </window>

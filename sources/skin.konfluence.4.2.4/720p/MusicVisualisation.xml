@@ -19,16 +19,26 @@
 			<aspectratio>scale</aspectratio>
 			<texture background="true">$INFO[Player.Art(fanart)]</texture>
 			<colordiffuse>AAFFFFFF</colordiffuse>
-			<visible>!String.IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(HideVisualizationFanart)</visible>
+			<visible>String.IsEmpty(Player.Art(album.fanart)) + !String.IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(HideVisualizationFanart)</visible>
 			<fadetime>600</fadetime>
 		</control>
+		<control type="image">
+			<description>Fanart Image for Albums</description>
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>scale</aspectratio>
+			<texture background="true">$INFO[Player.Art(album.fanart)]</texture>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<visible>!String.IsEmpty(Player.Art(album.fanart)) + !Skin.HasSetting(HideVisualizationFanart)</visible>
+			<fadetime>600</fadetime>
+		</control>
+
 		<!-- media infos -->
 		<control type="group">
 			<depth>DepthOSD</depth>
 			<animation effect="fade" time="150">VisibleChange</animation>
-			<!--
-			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
-			-->
 			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(SliderDialog)]</visible>
 			<control type="image">
 				<left>-20</left>
@@ -87,7 +97,7 @@
 				<width>1320</width>
 				<height>230</height>
 				<texture border="1">HomeNowPlayingBack.png</texture>
-				<animation effect="fade" end="98" time="0" condition="true">Conditional</animation><!-- orig 98 -->
+				<animation effect="fade" end="98" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="image">
 				<depth>DepthOSDPopout</depth>
@@ -103,8 +113,8 @@
 			</control>
 			<control type="group">
 				<left>330</left>
-				<top>195r</top><!-- 185r move up test -->
-				
+				<top>195r</top>
+
 				<!-- NOW PLAYING -->
 				<control type="label" id="1">
 					<description>Heading label</description>
@@ -124,7 +134,7 @@
 					<description>Artist label</description>
 					<left>20</left>
 					<top>30</top>
-					<width>800</width><!-- 910 -->
+					<width>800</width>
 					<height>25</height>
 					<align>left</align>
 					<font>font12</font>
@@ -260,7 +270,7 @@
 			</control>
 			<control type="group">
 				<left>330</left>
-				<top>105r</top><!-- 95r move up test -->
+				<top>105r</top>
 				<control type="label">
 					<left>0</left>
 					<top>0</top>
