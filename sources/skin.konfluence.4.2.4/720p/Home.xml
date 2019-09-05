@@ -19,6 +19,20 @@
 			<visible>Player.HasAudio + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
+			<!-- TEST CODE -->
+			<control type="image">
+				<description>Fanart Image for Albums</description>
+				<left>0</left>
+				<top>-20</top>
+				<width>1280</width>
+				<height>720</height>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$INFO[Player.Art(album.fanart)]</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<visible>!String.IsEmpty(Player.Art(album.fanart)) + !Skin.HasSetting(HideVisualizationFanart)</visible>
+				<fadetime>600</fadetime>
+			</control>
+			<!----- END ----->
 			<control type="image">
 				<description>Cover image</description>
 				<left>20</left>
