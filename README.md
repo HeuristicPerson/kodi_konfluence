@@ -2,7 +2,7 @@ A \[K\]onfluence Zeitgeist
 ==========================
 
 **IMPORTANT!** "A \[K\]onfluence Zeitgeist" is just a modification of the theme
-[https://forum.kodi.tv/showthread.php?tid=242892&highlight=zeitgeist](A Confluence Zeitgeist)
+[A Confluence Zeitgeist](https://forum.kodi.tv/showthread.php?tid=242892&highlight=zeitgeist)
 created by axbmcuser. My suggestion is to first try it for a while and then,
 check this small mod later.
 
