@@ -24,3 +24,9 @@ This are the changes I introduced in the theme:
 
   6. New backgrounds (you know, when I install Kodi in a new machine I don't
      want to be searching around for good looking images).
+
+
+Screenshots
+===========
+
+![Home - Recent Movie](documentation/screenshots/home-movie-recent.png "Home - Recent Movie")
