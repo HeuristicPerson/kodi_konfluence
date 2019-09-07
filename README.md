@@ -30,3 +30,7 @@ Screenshots
 ===========
 
 ![Home - Recent Movie](documentation/screenshots/home-movie-recent.png "Home - Recent Movie")
+
+![Home - Recent Album](documentation/screenshots/home-album-recent-artist-fanart.png "Home - Recent Album - Artist Fanart")
+
+![Home - Recent Album](documentation/screenshots/home-album-recent-album-fanart.png "Home - Recent Album - Album Fanart")
