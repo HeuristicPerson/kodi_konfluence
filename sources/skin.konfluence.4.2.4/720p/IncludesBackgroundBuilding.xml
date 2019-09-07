@@ -28,23 +28,6 @@
 		black background to completely hide the default background and allow darkening (by transparency)
 		the fanart images a bit
 	  -->
-		<!-- TEST CODE -->
-		<control type="label">
-			<font>font14</font>
-      <textcolor>ffffffff</textcolor>
-      <shadowcolor>ff000000</shadowcolor>
-			<!--<label>-- $INFO[Player.Art(fanart)] ++</label> -->
-			<!--<label>-- $INFO[ListItem.Art(fanart)] ++</label>-->
-			<label>$VAR[MetaFanart]</label>
-      <left>0</left>
-      <top>300</top>
-      <width>1280</width>
-      <visible>true</visible>
-      <align>center</align>
-      <aligny>top</aligny>
-		</control>
-		<!--    end    -->
-
 		<control type="label" id="6661">
 			<description>Dummy label to control the visibility of fanart image</description>
 			<label>$VAR[MetaFanart]</label>
@@ -66,12 +49,9 @@
 			<include>BackgroundDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture>$VAR[MetaFanart]</texture>
-			<!--<texture>$INFO[ListItem.Art(fanart)]</texture>-->
 			<include>backgroundfade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<include>Window_OpenClose_Animation</include>
-			<!--<visible>!String.IsEmpty(VAR[MetaFanart])</visible>-->
-			<!--<visible>true</visible>-->
 			<visible>!String.IsEmpty(Control.GetLabel(6661))</visible>
 			<include>VisibleFadeEffect</include>
 		</control>
@@ -82,8 +62,18 @@
 			<colordiffuse>40FFFFFF</colordiffuse>
 			<depth>DepthBackground</depth>
 			<include>BackgroundDimensions</include>
-			<visible>true</visible>
 			<visible>Window.IsActive(Home)</visible>
+			<include>VisibleFadeEffect</include>
+		</control>
+
+		<!-- Black banground when playing videos, so 4:3 videos don't show anything behind -->
+		<control type="image">
+			<description>Black overlay over Home screen to avoid too much clutter</description>
+			<texture>_added_img/1280x720_black.png</texture>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<depth>DepthBackground</depth>
+			<include>BackgroundDimensions</include>
+			<visible>Player.HasVideo</visible>
 			<include>VisibleFadeEffect</include>
 		</control>
 
