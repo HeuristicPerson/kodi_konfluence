@@ -34,3 +34,5 @@ Screenshots
 ![Home - Recent Album](documentation/screenshots/home-album-recent-artist-fanart.png "Home - Recent Album - Artist Fanart")
 
 ![Home - Recent Album](documentation/screenshots/home-album-recent-album-fanart.png "Home - Recent Album - Album Fanart")
+
+![Player - Music](documentation/screenshots/player-music.png "Player - Music")
