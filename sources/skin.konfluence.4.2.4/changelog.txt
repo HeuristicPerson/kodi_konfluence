@@ -1,4 +1,5 @@
 2019-08-27 - 4.2.4
     - Added fanart for albums while playing.
     - Removed KODI logo from home screen.
-    - Added kiosk mode option (disables sidebar menus)
+    - Added kiosk mode option (disables sidebar menus).
+    - Added fanart for albums while playing in Home screen background.

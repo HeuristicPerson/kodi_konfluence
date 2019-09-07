@@ -1,9 +1,10 @@
 A \[K\]onfluence Zeitgeist
 ==========================
 
-**IMPORTANT!** "A \[K\]onfluence Zeitgeist" is just a very small modification of
-the theme "A Confluence Zeitgeist" created by XXX. My suggestion is to first try
-it for a while and then, check this small mod later.
+**IMPORTANT!** "A \[K\]onfluence Zeitgeist" is just a modification of the theme
+[https://forum.kodi.tv/showthread.php?tid=242892&highlight=zeitgeist](A Confluence Zeitgeist)
+created by axbmcuser. My suggestion is to first try it for a while and then,
+check this small mod later.
 
 This are the changes I introduced in the theme:
 
@@ -13,7 +14,13 @@ This are the changes I introduced in the theme:
      menus. This is specially useful for kids, elders, or any non-tech people
      who want or need a simpler interface.
 
-  3. Album fanart while playing (WIP).
+  3. Added album fanart (Confluence Zeitgeist shows just artist fanart).
 
-  4. New backgrounds (you know, when I install Kodi in a new machine I don't
+  4. Music fanart (artist or album) is shown in Home screen or any menu while
+     music is playing (Confluence Zeitgeist shows a black screen).
+
+  5. Background fanart is darken in Home screen to make everything more
+     readable.
+
+  6. New backgrounds (you know, when I install Kodi in a new machine I don't
      want to be searching around for good looking images).

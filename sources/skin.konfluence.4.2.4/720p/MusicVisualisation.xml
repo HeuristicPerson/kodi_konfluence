@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol></defaultcontrol>
 	<controls>
+		<include>CommonBackground</include>
 		<control type="visualisation" id="2">
 			<!-- FIX ME Music Visualization needs to have an id of 2 in this window to be able to lock or change preset -->
 			<description>visualisation</description>
@@ -9,30 +10,6 @@
 			<top>0</top>
 			<width>1280</width>
 			<height>720</height>
-		</control>
-		<control type="image">
-			<description>Fanart Image for Artist</description>
-			<left>0</left>
-			<top>0</top>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[Player.Art(fanart)]</texture>
-			<colordiffuse>AAFFFFFF</colordiffuse>
-			<visible>String.IsEmpty(Player.Art(album.fanart)) + !String.IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(HideVisualizationFanart)</visible>
-			<fadetime>600</fadetime>
-		</control>
-		<control type="image">
-			<description>Fanart Image for Albums</description>
-			<left>0</left>
-			<top>0</top>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>scale</aspectratio>
-			<texture background="true">$INFO[Player.Art(album.fanart)]</texture>
-			<colordiffuse>FFFFFFFF</colordiffuse>
-			<visible>!String.IsEmpty(Player.Art(album.fanart)) + !Skin.HasSetting(HideVisualizationFanart)</visible>
-			<fadetime>600</fadetime>
 		</control>
 
 		<!-- media infos -->
