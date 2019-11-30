@@ -8,7 +8,7 @@ check this small mod later.
 
 This are the changes I introduced in the theme:
 
-  1. Removal the Kodi logo from main screen.
+  1. Removed https://forum.no-intro.org/viewtopic.php?f=7&t=3561Kodi logo from main screen.
 
   2. Added a "kiosk" mode in settings menu so you can block access to side bar
      menus. This is specially useful for kids, elders, or any non-tech people
